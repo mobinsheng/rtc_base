@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2003E46E-A3C1-4F2F-A0C2-2D3B58378EFE}</ProjectGuid>
+    <RootNamespace>rtcbase</RootNamespace>
+    <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>./;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>./;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <TargetExt>.lib</TargetExt>
+    <TargetName>$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>$(ProjectName)_d</TargetName>
+    <OutDir>$(SolutionDir)lib\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)lib\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>./;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WEBRTC_WIN;WIN32;NOMINMAX;_DEBUG;_CONSOLE;_WINSOCK_DEPRECATED_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions>/arch:IA32 /utf-8 /Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>./;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WEBRTC_WIN;NOMINMAX;WIN32;_CONSOLE;_WINSOCK_DEPRECATED_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions>/arch:IA32 /utf-8 /Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>./;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WEBRTC_WIN;WIN32;NOMINMAX;NDEBUG;_CONSOLE;_WINSOCK_DEPRECATED_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;_ATL_DISABLE_NOTHROW_NEW;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/arch:IA32 /utf-8 /Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>./;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WEBRTC_WIN;NOMINMAX;WIN32;_CONSOLE;_WINSOCK_DEPRECATED_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/arch:IA32 /utf-8 /Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="rtc_base\arraysize.h" />
+    <ClInclude Include="rtc_base\array_view.h" />
+    <ClInclude Include="rtc_base\asyncinvoker-inl.h" />
+    <ClInclude Include="rtc_base\asyncinvoker.h" />
+    <ClInclude Include="rtc_base\asyncresolverinterface.h" />
+    <ClInclude Include="rtc_base\asyncsocket.h" />
+    <ClInclude Include="rtc_base\atomicops.h" />
+    <ClInclude Include="rtc_base\bind.h" />
+    <ClInclude Include="rtc_base\bitbuffer.h" />
+    <ClInclude Include="rtc_base\buffer.h" />
+    <ClInclude Include="rtc_base\byteorder.h" />
+    <ClInclude Include="rtc_base\checks.h" />
+    <ClInclude Include="rtc_base\constructormagic.h" />
+    <ClInclude Include="rtc_base\criticalsection.h" />
+    <ClInclude Include="rtc_base\event.h" />
+    <ClInclude Include="rtc_base\event_tracer.h" />
+    <ClInclude Include="rtc_base\ipaddress.h" />
+    <ClInclude Include="rtc_base\location.h" />
+    <ClInclude Include="rtc_base\messagehandler.h" />
+    <ClInclude Include="rtc_base\messagequeue.h" />
+    <ClInclude Include="rtc_base\nethelpers.h" />
+    <ClInclude Include="rtc_base\networkmonitor.h" />
+    <ClInclude Include="rtc_base\network_constants.h" />
+    <ClInclude Include="rtc_base\nullsocketserver.h" />
+    <ClInclude Include="rtc_base\numerics\safe_compare.h" />
+    <ClInclude Include="rtc_base\numerics\safe_conversions.h" />
+    <ClInclude Include="rtc_base\numerics\safe_conversions_impl.h" />
+    <ClInclude Include="rtc_base\numerics\safe_minmax.h" />
+    <ClInclude Include="rtc_base\optional.h" />
+    <ClInclude Include="rtc_base\physicalsocketserver.h" />
+    <ClInclude Include="rtc_base\platform_thread.h" />
+    <ClInclude Include="rtc_base\platform_thread_types.h" />
+    <ClInclude Include="rtc_base\refcount.h" />
+    <ClInclude Include="rtc_base\refcountedobject.h" />
+    <ClInclude Include="rtc_base\refcounter.h" />
+    <ClInclude Include="rtc_base\scoped_ref_ptr.h" />
+    <ClInclude Include="rtc_base\signalthread.h" />
+    <ClInclude Include="rtc_base\socket.h" />
+    <ClInclude Include="rtc_base\socketaddress.h" />
+    <ClInclude Include="rtc_base\socketfactory.h" />
+    <ClInclude Include="rtc_base\socketserver.h" />
+    <ClInclude Include="rtc_base\stringize_macros.h" />
+    <ClInclude Include="rtc_base\stringutils.h" />
+    <ClInclude Include="rtc_base\system\arch.h" />
+    <ClInclude Include="rtc_base\system\inline.h" />
+    <ClInclude Include="rtc_base\system\unused.h" />
+    <ClInclude Include="rtc_base\template_util.h" />
+    <ClInclude Include="rtc_base\third_party\sigslot\sigslot.h" />
+    <ClInclude Include="rtc_base\thread.h" />
+    <ClInclude Include="rtc_base\thread_annotations.h" />
+    <ClInclude Include="rtc_base\thread_checker.h" />
+    <ClInclude Include="rtc_base\thread_checker_impl.h" />
+    <ClInclude Include="rtc_base\timeutils.h" />
+    <ClInclude Include="rtc_base\trace_event.h" />
+    <ClInclude Include="rtc_base\type_traits.h" />
+    <ClInclude Include="rtc_base\win32.h" />
+    <ClInclude Include="rtc_base\win32socketinit.h" />
+    <ClInclude Include="rtc_base\win32socketserver.h" />
+    <ClInclude Include="rtc_base\win32window.h" />
+    <ClInclude Include="rtc_base\zero_memory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="rtc_base\asyncinvoker.cc" />
+    <ClCompile Include="rtc_base\asyncresolverinterface.cc" />
+    <ClCompile Include="rtc_base\asyncsocket.cc" />
+    <ClCompile Include="rtc_base\bitbuffer.cc" />
+    <ClCompile Include="rtc_base\checks.cc" />
+    <ClCompile Include="rtc_base\criticalsection.cc" />
+    <ClCompile Include="rtc_base\event.cc" />
+    <ClCompile Include="rtc_base\event_tracer.cc" />
+    <ClCompile Include="rtc_base\ipaddress.cc" />
+    <ClCompile Include="rtc_base\location.cc" />
+    <ClCompile Include="rtc_base\messagehandler.cc" />
+    <ClCompile Include="rtc_base\messagequeue.cc" />
+    <ClCompile Include="rtc_base\nethelpers.cc" />
+    <ClCompile Include="rtc_base\networkmonitor.cc" />
+    <ClCompile Include="rtc_base\nullsocketserver.cc" />
+    <ClCompile Include="rtc_base\physicalsocketserver.cc" />
+    <ClCompile Include="rtc_base\platform_thread.cc" />
+    <ClCompile Include="rtc_base\platform_thread_types.cc" />
+    <ClCompile Include="rtc_base\signalthread.cc" />
+    <ClCompile Include="rtc_base\socket.cc" />
+    <ClCompile Include="rtc_base\socketaddress.cc" />
+    <ClCompile Include="rtc_base\stringutils.cc" />
+    <ClCompile Include="rtc_base\third_party\sigslot\sigslot.cc" />
+    <ClCompile Include="rtc_base\thread.cc" />
+    <ClCompile Include="rtc_base\thread_checker_impl.cc" />
+    <ClCompile Include="rtc_base\timeutils.cc" />
+    <ClCompile Include="rtc_base\win32.cc" />
+    <ClCompile Include="rtc_base\win32socketinit.cc" />
+    <ClCompile Include="rtc_base\win32socketserver.cc" />
+    <ClCompile Include="rtc_base\win32window.cc" />
+    <ClCompile Include="rtc_base\zero_memory.cc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
